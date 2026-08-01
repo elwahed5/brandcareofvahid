@@ -1,6 +1,13 @@
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Email links — built at runtime so the address never sits in plain text in the page source
+const emailUser = ['v', 'r', 'e', 'd', 'j', 'a', 'l', '5'].join('');
+const emailHost = ['g', 'm', 'a', 'i', 'l'].join('') + '.' + 'com';
+document.querySelectorAll('.js-email').forEach((link) => {
+  link.setAttribute('href', 'mailto:' + emailUser + '@' + emailHost);
+});
+
 // Mobile nav toggle
 const navToggle = document.querySelector('.nav__toggle');
 const navLinks = document.querySelector('.nav__links');

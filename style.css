@@ -430,6 +430,9 @@ section {
   overflow: hidden;
   border: 1px solid var(--line);
   margin-bottom: 24px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 212, 0, 0.16), transparent 55%),
+    linear-gradient(160deg, #1c1812 0%, #0b0b0a 70%);
 }
 
 .work-card__cover {
@@ -462,6 +465,14 @@ section {
 
 .work-card__media:hover .work-card__photo {
   transform: scale(1.04);
+}
+
+.work-card__photo--contain {
+  object-fit: contain;
+}
+
+.work-card__media--black {
+  background: #000;
 }
 
 .work-card__wordmark {
@@ -611,6 +622,10 @@ section {
 .case-cover--contain .case-cover__photo {
   object-fit: contain;
   padding: 24px;
+}
+
+.case-cover--black {
+  background: #000;
 }
 
 .case-caption {
