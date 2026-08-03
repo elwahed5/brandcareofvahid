@@ -815,27 +815,37 @@ section {
   padding-top: 4px;
 }
 
+.education__logo-wrap {
+  height: clamp(96px, 10vw, 128px);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: flex-end;
+}
+
 .education__logo {
-  height: clamp(64px, 7vw, 84px);
+  max-height: 100%;
   width: auto;
   object-fit: contain;
-  margin-bottom: 18px;
   display: block;
 }
 
+.education__item:first-child .education__logo {
+  max-height: clamp(120px, 13vw, 160px);
+}
+
 .education__degree {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--gold);
+  margin: 0;
+}
+
+.education__school {
   font-family: var(--serif);
   font-weight: 500;
   font-size: clamp(19px, 2vw, 24px);
   color: var(--ink);
   margin: 0 0 8px;
-}
-
-.education__school {
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: var(--gold);
-  margin: 0;
 }
 
 @media (max-width: 700px) {
